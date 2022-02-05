@@ -1,10 +1,11 @@
 import React from "react";
+import "./App.css";
+import ClickToEdit from "./components/ClickToEdit";
 
 import Modal from "./components/Modal";
 import Tab from "./components/Tab";
 import Tag from "./components/Tag";
 import Toggle from "./components/Toggle";
-import "./App.css";
 
 function App() {
   return (
@@ -27,6 +28,11 @@ function App() {
       <div className="container">
         <div className="title">Tag</div>
         <Tag />
+      </div>
+
+      <div className="container">
+        <div className="title">ClickToEdit</div>
+        <ClickToEdit />
       </div>
     </div>
   );
