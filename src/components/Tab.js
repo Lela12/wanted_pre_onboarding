@@ -10,7 +10,7 @@ const TapWrapper = styled.ul`
   color: #9e9e9e;
   font-weight: bold;
   margin-bottom: 7rem;
-  height: 60px;
+  height: 40px;
   margin-left: 60px;
   margin-top: 20px;
   padding-left: 50px;

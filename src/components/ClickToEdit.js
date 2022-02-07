@@ -11,6 +11,7 @@ const InputContainer = styled.div`
 `;
 const Input = styled.div`
   margin: 20px;
+  list-style: none;
 
   label {
     margin: 15px;
@@ -21,6 +22,12 @@ const Input = styled.div`
     height: 30px;
     text-align: center;
     cursor: pointer;
+    outline: none;
+    border: 1px solid #c5c5c5;
+
+    input:focus {
+      border: 1px solid #4900ce;
+    }
   }
 
   .InputForm {
@@ -33,7 +40,7 @@ const ClickToEdit = () => {
   const inputRef = useRef(null);
   const [user, setUser] = useState({
     name: "김코딩",
-    age: "20",
+    age: 20,
   });
 
   const { name, age } = user;
@@ -50,7 +57,6 @@ const ClickToEdit = () => {
           <label>이름</label>
           <input
             autoComplete="nope"
-            type="text"
             name="name"
             value={name}
             onChange={onChangeInput}
@@ -61,7 +67,6 @@ const ClickToEdit = () => {
           <label>나이</label>
           <input
             autoComplete="nope"
-            type="number"
             name="age"
             value={age}
             onChange={onChangeInput}

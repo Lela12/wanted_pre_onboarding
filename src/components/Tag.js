@@ -67,13 +67,14 @@ const TagContainer = styled.div`
 
 const Tag = () => {
   const [tags, setTags] = useState(["CodeStates", "JJang"]);
-  const removeTags = (indexToRemove) => {
+  const removeTags = (index) => {
     setTags(
       tags.filter((tag) => {
-        return tag !== tags[indexToRemove];
+        return tag !== tags[index];
       })
     );
   };
+
   const addTags = (e) => {
     if (e.key === "Enter" && e.target.value !== "") {
       setTags([...tags, e.target.value]);

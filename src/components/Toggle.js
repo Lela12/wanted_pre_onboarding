@@ -13,10 +13,14 @@ const Checkbox = styled.input`
   display: none;
 
   &:checked + span {
-    background-color: #4a00ce;
+    background-position: left;
+    background: linear-gradient(to left, #4a00ce 50%, #c5c5c5 50%) left;
+    background-size: 200%;
+    transition: 1s;
 
     &:before {
       left: 40px;
+      transition: 1s;
     }
   }
 `;
@@ -27,8 +31,11 @@ const Label = styled.span`
   cursor: pointer;
   width: 69px;
   height: 32px;
+  background-position: right;
   border-radius: 25px;
-  background-color: #c5c5c5;
+  background: linear-gradient(to right, #c5c5c5 50%, #4a00ce 50%) right;
+  background-size: 200%;
+  transition: 1s;
 
   &:before {
     content: "";
@@ -38,9 +45,8 @@ const Label = styled.span`
     width: 24px;
     height: 24px;
     border-radius: 45px;
-    transition: 0.2s;
     background: white;
-    transition: 0.6s;
+    transition: 0.9s;
   }
 `;
 

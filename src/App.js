@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import AutoComplete from "./components/AutoComplete";
 import ClickToEdit from "./components/ClickToEdit";
 
 import Modal from "./components/Modal";
@@ -28,6 +29,11 @@ function App() {
       <div className="container">
         <div className="title">Tag</div>
         <Tag />
+      </div>
+
+      <div className="container">
+        <div className="title">AutoComplete</div>
+        <AutoComplete />
       </div>
 
       <div className="container">
