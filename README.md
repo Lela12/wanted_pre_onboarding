@@ -51,8 +51,10 @@
 # 3️⃣ Tab
 #### ❗구현 방법
 - `useState`를 사용해 tapState를 관리하였으며, 선택된 탭의 index를 통해 표시되게 되고, li 태그에 onClick 이벤트로 index값이 변할 때마다 selectTabHandler(idx)를 불러오게 하였습니다.
--  
+
 #### ⁉️ 구현하면서 어려웠던 점과 해결 방법
+- 특정 탭을 클릭 시 index에 따라 tab active한 상태로 보여줘야 했는데 그 과정에서 어떻게 하여 구현을 해야하는지에 대해서 어려웠습니다.
+- tabList를 map함수의 두번째 인자로 index를 넣어 해결 할 수 있었습니다.
 #### 💡 실행 방법
 onClick을 실행할 때마다 index값을 
 
@@ -68,6 +70,8 @@ onClick을 실행할 때마다 index값을
 #### 💡 실행 방법
 # 6️⃣ ClickToEdit
 #### ❗구현 방법과 이유
+useRef()함수를 사용하여 name, age input창을 클릭 시 focus를 줄 수 있습니다. name과 age를 입력 시 바로 InputForm에 이름, 나이를 보여주었습니다. useState를 name:"김코딩", age:20으로 초기값을 주었습니다.
 
 #### ⁉️ 구현하면서 어려웠던 점과 해결 방법
+특정 input창 클릭시 수정이 되고 
 #### 💡 실행 방법
