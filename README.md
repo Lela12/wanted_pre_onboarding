@@ -53,10 +53,28 @@
 - `useState`를 사용해 tapState를 관리하였으며, 선택된 탭의 index를 통해 표시되게 되고, li 태그에 onClick 이벤트로 index값이 변할 때마다 selectTabHandler(idx)를 불러오게 하였습니다.
 
 #### ⁉️ 구현하면서 어려웠던 점과 해결 방법
-- 특정 탭을 클릭 시 index에 따라 tab active한 상태로 보여줘야 했는데 그 과정에서 어떻게 하여 구현을 해야하는지에 대해서 어려웠습니다.
-- tabList를 map함수의 두번째 인자로 index를 넣어 해결 할 수 있었습니다.
+- 특정 탭을 클릭 시 index에 따라 `tab active`한 상태로 보여줘야 했는데 그 과정에서 어떻게 하여 구현을 해야하는지에 대해서 어려웠습니다.
+- `tabList`를 `map`함수의 두번째 인자로 `index`를 넣어 해결 할 수 있었습니다.
 #### 💡 실행 방법
-onClick을 실행할 때마다 index값을 
+- `onClick`을 실행할 때마다 `index`값을 onClick 핸들러 함수에 전달하게 되고, 그 값을 통해 `tabList`의 `className`을 바꿔 css속성을 다르게 주어 선택된 탭의 색만 변하게 됩니다.
+```
+    <div>
+      <TapWrapper>
+        {tabList.map((tab, index) => {
+          return (
+            <li
+              key={index}
+              className={`${index === tapState ? "tabList active" : "tabList"}`}
+              onClick={() => selectTabHandler(index)}
+            >
+              {tab.id}
+            </li>
+          );
+        })}
+      </TapWrapper>
+      <Desc>{tabList[tapState].content}</Desc>
+    </div>
+```
 
 # 4️⃣ Tag
 #### ❗구현 방법과 이유
