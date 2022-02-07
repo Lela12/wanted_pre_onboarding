@@ -109,8 +109,22 @@
 #### 💡 실행 방법
 # 6️⃣ ClickToEdit
 #### ❗구현 방법과 이유
-useRef()함수를 사용하여 name, age input창을 클릭 시 focus를 줄 수 있습니다. name과 age를 입력 시 바로 InputForm에 이름, 나이를 보여주었습니다. useState를 name:"김코딩", age:20으로 초기값을 주었습니다.
-
+- `useState`를 `name:"김코딩", age:20`으로 초기값을 주었으며, `useRef()`함수를 사용하여 name input, age input창을 클릭 시 `focus`를 줄 수 있습니다. name과 age를 입력 시 실시간으로 `InputForm`에 이름, 나이를 보여줍니다. 
 #### ⁉️ 구현하면서 어려웠던 점과 해결 방법
-특정 input창 클릭시 수정이 되고 
+
 #### 💡 실행 방법
+```
+const ClickToEdit = () => {
+  const inputRef = useRef(null);
+  const [user, setUser] = useState({
+    name: "김코딩",
+    age: 20,
+  });
+
+  const { name, age } = user;
+
+  const onChangeInput = (e) => {
+    const { name, value } = e.target;
+    setUser({ ...user, [name]: value });
+  };
+```
