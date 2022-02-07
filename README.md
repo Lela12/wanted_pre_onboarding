@@ -109,9 +109,10 @@
 #### 💡 실행 방법
 # 6️⃣ ClickToEdit
 #### ❗구현 방법과 이유
-- `useState`를  `name:"김코딩", age:20`으로 초기값을 주었으며, `useRef()`함수를 사용하여 name input, age input창을 클릭 시 `focus`를 줄 수 있습니다. name과 age를 입력 시 실시간으로 `InputForm`에 이름, 나이를 보여줍니다. 
+- `useState`를  `name:"김코딩", age:20`으로 초기값을 주었으며, `useRef()`함수를 사용하여 `name` input, `age` input을 클릭 시 `focus`를 줄 수 있습니다. `name`과 `age`를 입력 시 실시간으로 `InputForm`에 이름, 나이를 보여줍니다. 
 #### ⁉️ 구현하면서 어려웠던 점과 해결 방법
-
+`input` 상태 관리를 하기 위해서 `state`를 어떻게 만들것인지 고민을 하였습니다.
+여러개의 `state`를 만들기 보다 `input`에 `name`을 설정해서 관리하였습니다.
 
 #### 💡 실행 방법
 `input`창을 클릭하여 `onChangeInput()`함수를 사용하여 name, age를 수정하게 됩니다. `...user`와 `[name]`을 사용하여 현재 입력하고 있는 `input`의 name 상태를 변경하게 됩니다.
