@@ -50,7 +50,7 @@
 
 # 3️⃣ Tab
 #### ❗구현 방법
-- `useState`를 사용해 tapState를 관리하였으며, 선택된 탭의 index를 통해 표시되게 되고, li 태그에 onClick 이벤트로 index값이 변할 때마다 selectTabHandler(idx)를 불러오게 하였습니다.
+- `useState`를 사용해 `tapState`를 관리하였으며, 선택된 탭의 `index`를 통해 표시되게 되고, li 태그에 `onClick` 이벤트로 index값이 변할 때마다 `selectTabHandler(idx)`를 불러오게 하였습니다.
 
 #### ⁉️ 구현하면서 어려웠던 점과 해결 방법
 - 특정 탭을 클릭 시 index에 따라 `tab active`한 상태로 보여줘야 했는데 그 과정에서 어떻게 하여 구현을 해야하는지에 대해서 어려웠습니다.
