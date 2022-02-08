@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import AutoComplete from "./components/AutoComplete";
-import ClickToEdit from "./components/ClickToEdit";
+import { ClickToEdit } from "./components/ClickToEdit";
 
 import Modal from "./components/Modal";
 import Tab from "./components/Tab";
