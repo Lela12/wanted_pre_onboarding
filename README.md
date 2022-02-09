@@ -1,15 +1,15 @@
 # 1️⃣ Toggle
 #### ❗구현 방법
 - check/uncheck를 반복하면서 전환될 수 있도록 구현하였습니다.
-- `Checkbox type="checkbox"`체크박스로 만들고, 체크박스는 스타일링 하기에 어려움이 있어 label을 만들어 체크박스와 연결하고 체크박스는 `display:none`으로 구현하였습니다.
-- `useState`를 이용하여 토글 할 수 있는 `toggled` 값을 관리하며, toggle 값에 따라 토글 창의 배경색, 버튼의 위치, 설명이 바뀌게 하였습니다.
+- `Checkbox type="checkbox"`체크박스로 만들고, 체크박스는 스타일링 하기에 어려움이 있어 `label`을 만들어 체크박스와 연결하고 체크박스는 `display:none`으로 구현하였습니다.
+- `useState`를 이용하여 토글 할 수 있는 `toggled` 값을 관리하며, `toggle` 값에 따라 토글 창의 배경색, 버튼의 위치, 설명이 바뀌게 하였습니다.
 
 #### ⁉️ 구현하면서 어려웠던 점과 해결 방법
 - 색이 변할 때 서서히 색이 차오르게 구현하고 싶었는데, 토클시 색이 바로 바뀌는 어려움이 있었습니다.
-- ` background: linear-gradient(to left, #4a00ce 50%, #c5c5c5 50%) left;`로 색을 채워놓고 `background-size: 200%;`로 설정하여, 회색만 보이게 하고 OFF의 상태가 되었을 경우 천천히 보라색으로 채워지게 하였습니다.
+- ` background: linear-gradient(to left, #4a00ce 50%, #c5c5c5 50%) left;`로 색을 채워놓고 `background-size: 200%;`로 설정하여, 회색만 보이게 하고 `OFF`의 상태가 되었을 경우 천천히 보라색으로 채워지게 하였습니다.
 
 #### 💡 실행 방법
-`checkbox`를 체크박스 타입으로 만들고, `toggleHandler`함수를 통해 toggle의 true/false 값을 변경하였습니다. 동그란 버튼을 `position: absolute;`, Label을 `position: relative;`으로 하여 동그란 버튼이 Label 안에 들어가게 하였습니다. 버튼 클릭 시 삼 항 연산자를 이용하여, ON/OFF 유무를 보여주게 됩니다.
+`checkbox`를 체크박스 타입으로 만들고, `toggleHandler`함수를 통해 toggle의 true/false 값을 변경하였습니다. 동그란 버튼을 `position: absolute;`, Label을 `position: relative;`으로 하여 동그란 버튼이 `Label 안에 들어가게 하였습니다. 버튼 클릭 시 삼 항 연산자를 이용하여, `ON/OFF` 유무를 보여주게 됩니다.
 ```
       <ToggleWrapper>
         <Checkbox type="checkbox" onChange={toggleHandler} />
@@ -22,8 +22,8 @@
 
 # 2️⃣ Modal
 #### ❗구현 방법
-- `useState`를 이용하여 true이면 모달창을 보여주고, false이면 모달창을 닫습니다.
-- Open Modal 버튼 클릭할 때 onClick 이벤트를 통해 모달창을 보여주고, 외부 배경에서 x표시 클릭할 때 모달창이 닫힙니다.
+- `useState`를 이용하여 `true`이면 모달창을 보여주고, `false`이면 모달창을 닫습니다.
+- `Open Modal` 버튼 클릭할 때 클릭 이벤트를 통해 모달창을 보여주고, 외부 배경에서 x표시 클릭할 때 모달창이 닫힙니다.
 
 #### ⁉️ 구현하면서 어려웠던 점과 해결 방법
 - 버튼 클릭 시 모달창이 보이는 경우 배경을 클릭하면 모달창이 닫히고, 모달창 내부를 클릭하면 닫히지 않게 구현에 어려움이 있었습니다.
@@ -50,7 +50,7 @@
 
 # 3️⃣ Tab
 #### ❗구현 방법
-- `useState`를 사용해 `tapState`를 관리하였으며, 선택된 탭의 `index`를 통해 표시되게 되고, li 태그에 `onClick` 이벤트로 index 값이 변할 때마다 `selectTabHandler(idx)`를 불러오게 하였습니다.
+- `useState`를 사용해 `tapState`를 관리하였으며, 선택된 탭의 `index`를 통해 표시되게 되고, li 태그에 클릭 이벤트로 index 값이 변할 때마다 `selectTabHandler(idx)`를 불러오게 하였습니다.
 
 #### ⁉️ 구현하면서 어려웠던 점과 해결 방법
 - 특정 탭을 클릭 시 index에 따라 `tab active`한 상태로 보여줘야 했는데 그 과정에서 어떻게 하여 구현을 해야 할 지 어려움이 있었습니다.
