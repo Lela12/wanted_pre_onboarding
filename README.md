@@ -1,4 +1,5 @@
 # 1️⃣ Toggle
+![toggle](https://user-images.githubusercontent.com/92790783/153161772-4fd4d98b-a26d-4d6b-8e60-9bf59e052985.gif)
 #### ❗구현 방법
 - check/uncheck를 반복하면서 전환될 수 있도록 구현하였습니다.
 - `Checkbox type="checkbox"`체크박스로 만들고, 체크박스는 스타일링 하기에 어려움이 있어 `label`을 만들어 체크박스와 연결하고 체크박스는 `display:none`으로 구현하였습니다.
@@ -21,16 +22,17 @@
 ```
 
 # 2️⃣ Modal
+![modal](https://user-images.githubusercontent.com/92790783/153161785-54c6c9f7-81e6-4268-ad8c-5ce912925ae5.gif)
 #### ❗구현 방법
 - `useState`를 이용하여 `true`이면 모달창을 보여주고, `false`이면 모달창을 닫습니다.
-- `Open Modal` 버튼 클릭할 때 클릭 이벤트를 통해 모달창을 보여주고, 외부 배경에서 x표시 클릭할 때 모달창이 닫힙니다.
+- `Open Modal` 버튼 클릭할 때 클릭 이벤트를 통해 모달창을 보여주고, 외부 배경에서 x 표시 클릭할 때 모달창이 닫힙니다.
 
 #### ⁉️ 구현하면서 어려웠던 점과 해결 방법
 - 버튼 클릭 시 모달창이 보이는 경우 배경을 클릭하면 모달창이 닫히고, 모달창 내부를 클릭하면 닫히지 않게 구현에 어려움이 있었습니다.
 - `onClick={(e) => e.stopPropagation()`을 적용하여 자식 컴포넌트에서는 작동하지 않도록 함으로써, 모달창 내부 클릭 시 모달창이 닫히게 되는 문제를 해결하였습니다.
  
 #### 💡 실행 방법
-`isOpen` 이 true일 경우 모달창과 배경이 나타나게 되고, x 표시를 클릭하게 되면 모달창이 닫히게 됩니다. 이때, 외부 모달창 클릭 시에는 닫히게 구현하였으며, `ModalBody`인 내부 모달은 `e.stopPropagation()`를 사용하여 x를 제외한 곳을 클릭 시 어떠한 반응이 일어나지 않게 하였습니다.
+`isOpen` 이 true일 경우 모달창과 배경이 나타나게 되고, x 표시를 클릭하게 되면 모달창이 닫히게 됩니다. 이때, 외부 모달창 클릭 시에는 닫히게 구현하였으며, `ModalBody`인 내부 모달은 `e.stopPropagation()`를 사용하여 x 표시를 제외한 곳을 클릭 시 어떠한 반응이 일어나지 않게 하였습니다.
 ```
     <Container>
       <Button onClick={toggleModal}>Open Modal</Button>
@@ -49,6 +51,7 @@
 
 
 # 3️⃣ Tab
+![tab](https://user-images.githubusercontent.com/92790783/153161796-e261fb77-a0b6-486e-941c-5858000bd793.gif)
 #### ❗구현 방법
 - `useState`를 사용해 `tapState`를 관리하였으며, 선택된 탭의 `index`를 통해 표시되게 되고, li 태그에 클릭 이벤트로 index 값이 변할 때마다 `selectTabHandler(idx)`를 불러오게 하였습니다.
 
@@ -77,6 +80,7 @@
 ```
 
 # 4️⃣ Tag
+![tag](https://user-images.githubusercontent.com/92790783/153161802-68bf5440-9c5f-4da0-b9a1-1af76046b055.gif)
 #### ❗구현 방법
 - `input`값을 입력하고 `Enter`키를 입력하면 `addTags()`함수를 사용하여 추가되게 하였으며, 이전에 입력된 태그들을 포함하여 보여줍니다.
 - `removeTags()`함수를 사용하여 삭제 후 나머지 배열들만 보이게 구현하였습니다.
@@ -103,6 +107,7 @@
   };
 ```
 # 5️⃣ AutoComplete
+![autocomplete](https://user-images.githubusercontent.com/92790783/153161811-c35bec58-df7d-41d9-a346-e5e5196228de.gif)
 #### ❗구현 방법과 이유
 - 검색에 사용할 단어들을 `selectedData`에 더미 데이터로 만들었으며, `input`에 값이 입력될 때마다 `selectedData`를 `filter`함수를 사용하여 입력된 문자를 보여주게 하였습니다. 또한, 동일한 단어가 1개 이상일 경우 자동완성 단어를 보여주게 하였습니다.
 - `input`에 값이 없으면 `DropDown`이 보이지 않게 해주었습니다.
@@ -128,6 +133,7 @@
   }, [inputState]);
 ```
 # 6️⃣ ClickToEdit
+![clicktoedit](https://user-images.githubusercontent.com/92790783/153161827-8ed04056-d5fc-44c0-9e7b-a7bf108aa352.gif)
 #### ❗구현 방법과 이유
 - `useRef()`함수를 사용하여 `name` input, `age` input 창을 클릭 시 `focus`를 줄 수 있습니다. `name`과 `age`를 입력 시 실시간으로 `InputForm`에 이름, 나이를 보여줍니다. 
 #### ⁉️ 구현하면서 어려웠던 점과 해결 방법
