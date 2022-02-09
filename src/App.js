@@ -20,7 +20,6 @@ function App() {
         <div className="title">Modal</div>
         <Modal />
       </div>
-
       <div className="container">
         <div className="title">Tab</div>
         <Tab />
