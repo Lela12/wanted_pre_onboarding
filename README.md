@@ -22,7 +22,8 @@
 ```
 
 # 2️⃣ Modal
-![modal](https://user-images.githubusercontent.com/92790783/153161785-54c6c9f7-81e6-4268-ad8c-5ce912925ae5.gif)
+![modal](https://user-images.githubusercontent.com/92790783/153545273-65ee0fd4-670a-4d61-93f7-a2a2c314643d.gif)
+
 #### ❗구현 방법
 - `useState`를 이용하여 `true`이면 모달창을 보여주고, `false`이면 모달창을 닫습니다.
 - `Open Modal` 버튼 클릭할 때 클릭 이벤트를 통해 모달창을 보여주고, 외부 배경에서 x표시 클릭할 때 모달창이 닫힙니다.
